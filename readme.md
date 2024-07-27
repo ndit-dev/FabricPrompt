@@ -20,28 +20,22 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 
 ### Prerequisites
 
+- [Fabric](https://github.com/danielmiessler/fabric)
 - Go 1.22.2 or later
 - Git
+- xclip (linux only)
 
 #### Mac users
-No extra prerequisites should be needed
+```
+brew update
+brew upgrade
+brew install go git
+```
 
-#### Linux Users
-
-If you're using Linux, you'll need to install `xclip` as it's a dependency for clipboard operations:
-
-##### Ubuntu/Debian:
+#### Ubuntu/Debian:
 ```bash
 sudo apt-get update
-sudo apt-get install xclip
-```
-##### Fedora:
-```bash
-sudo dnf install xclip
-```
-##### Arch Linux:
-```bash
-sudo pacman -S xclip
+sudo apt-get install golang-go xclip git
 ```
 
 ### Installing FabricPrompt from source
