@@ -21,8 +21,8 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 To install FabricPrompt, ensure you have Go installed on your system, then run:
 ```
 go install github.com/ndit-dev/FabricPrompt@latest
-
 ```
+or just download the source code and run it with `go run main.go`
 
 ## Usage
 
