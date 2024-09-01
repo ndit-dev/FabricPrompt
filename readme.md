@@ -9,7 +9,7 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 ## Features
 
 - Run Fabric patterns directly from the command line
-- Support for input from stdin or clipboard
+- Support for input from stdin or directly inputting a prompt
 - Interactive pattern selector with fuzzy search
 - Ability to add extra context from a file
 - Option to save output to a file
