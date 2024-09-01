@@ -33,7 +33,14 @@ You can pipe text directly to FabricPrompt, and it will use the piped text as in
 ```
 echo "your text here" | fabricp
 ```
-## onfiguration
+
+This is the best way to pipe your clipboard to fabricp since it's inputfield is very simple and limitied. 
+```
+pbpaste | fabricp
+```
+By doing this you are still able to benefin from the fuzzy finder in fabricp as well as the the rest of the interface
+
+## Configuration
 
 FabricPrompt uses configuration files from Fabric. Make sure you have Fabric properly configured on your system.
 
@@ -53,7 +60,6 @@ But please follow these steps if you would like to contribute:
 
 Here are some additional features I'm considering for future updates:
 
-- Use `tcell` or `termbox` to enhance input, making it more like a text editor.
 - Add an option for users to save output directly to the clipboard.
 - Provide an option to display output using `batcat`, `mdcat`, or natively within this Go program for better markdown readability.
 - Extend support for more of Fabric's switched options.

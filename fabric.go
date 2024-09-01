@@ -11,10 +11,6 @@ import (
 	"github.com/ktr0731/go-fuzzyfinder"
 )
 
-func processWithFabric(query string, option Option, usedClipboard bool) {
-    // Implement the logic to process the query with Fabric
-}
-
 func getPatterns() ([]string, error) {
     patternDir := getPatternDir()
     entries, err := ioutil.ReadDir(patternDir)
@@ -78,17 +74,42 @@ func generateFabricCommand(question string, usedClipboard bool) {
         return
     }
 
-    // Define all available options
-    allOptions := []string{"-s", "-c", "save"}
-    
+    // Define all available options with descriptions
+    optionsMap := map[string]string{
+        "-s":   "stream output",
+        "-c":   "use context file",
+        "save": "save to file",
+    }
+
+    // Create a slice of options with descriptions for the prompt
+    var allOptionsWithDesc []string
+    for option, desc := range optionsMap {
+        if desc != "" {
+            allOptionsWithDesc = append(allOptionsWithDesc, fmt.Sprintf("%s (%s)", option, desc))
+        } else {
+            allOptionsWithDesc = append(allOptionsWithDesc, option)
+        }
+    }
+
     // Ask for options, without any pre-selected
-    selected := []string{}
+    selectedWithDesc := []string{}
     prompt := &survey.MultiSelect{
         Message: "Select options (use space to toggle, enter to confirm):",
-        Options: allOptions,
+        Options: allOptionsWithDesc,
         Default: []string{}, // Empty slice means no default selection
     }
-    survey.AskOne(prompt, &selected)
+    survey.AskOne(prompt, &selectedWithDesc)
+
+    // Parse the selected options to remove descriptions
+    var selected []string
+    for _, optionWithDesc := range selectedWithDesc {
+        for option := range optionsMap {
+            if optionWithDesc == option || optionWithDesc == fmt.Sprintf("%s (%s)", option, optionsMap[option]) {
+                selected = append(selected, option)
+                break
+            }
+        }
+    }
 
     var options []string
 	var saveFilename string
