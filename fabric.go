@@ -137,18 +137,6 @@ func generateFabricCommand(question string, usedClipboard bool) {
 		}
 	}
 
-    // Display query information
-    if usedClipboard {
-        truncatedQuestion := truncateQuestion(question)
-        fmt.Println("\nRunning query:")
-        fmt.Println(truncatedQuestion)
-        if truncatedQuestion != question {
-            fmt.Println("(Query truncated for display. Full query will be used in the command.)")
-        }
-    } else {
-        fmt.Println("\nRunning your query")
-    }
-
     fmt.Printf("with pattern: %s\n", pattern)
     if len(options) > 0 {
         fmt.Printf("and options: %s\n", strings.Join(options, " "))
@@ -159,6 +147,7 @@ func generateFabricCommand(question string, usedClipboard bool) {
         fmt.Printf("Saving output to: %s\n", saveFilename)
     }
     fmt.Println()
+	fmt.Println("Answer:")
 
     // Escape backticks and single quotes in the question to prevent command injection
     escapedQuestion := strings.ReplaceAll(strings.ReplaceAll(question, "`", "\\`"), "'", "'\\''")
