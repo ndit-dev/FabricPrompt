@@ -29,6 +29,10 @@ go install github.com/ndit-dev/FabricPrompt@latest
 type `fabricp` in your console after installation
 <placehold for video or gif>
 
+You can pipe text directly to FabricPrompt, and it will use the piped text as input instead of prompting for user input or using the clipboard, just as you do with fabric normally. For example:
+```
+echo "your text here" | fabricp
+```
 ## onfiguration
 
 FabricPrompt uses configuration files from Fabric. Make sure you have Fabric properly configured on your system.
