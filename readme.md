@@ -16,14 +16,6 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 - Real-time streaming of results
 - Easy integration with other command-line tools
 
-## Installation
-
-To install FabricPrompt, ensure you have Go installed on your system, then run:
-```
-go install github.com/ndit-dev/FabricPrompt@latest
-
-```
-
 ## Usage
 
 type `fabricp` in your console after installation
