@@ -24,6 +24,7 @@ func printHelp() {
 	fmt.Println("  After entering your query, you can select additional options for the Fabric command.")
 }
 
+// the help text for the tview application
 func tviewHelp() (*tview.TextView, *tview.TextView, *tview.TextView) {
 	help1 := tview.NewTextView().
 		SetDynamicColors(true).
