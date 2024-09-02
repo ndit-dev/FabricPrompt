@@ -16,6 +16,43 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 - Real-time streaming of results
 - Easy integration with other command-line tools
 
+## Install
+
+To install FabricPrompt, follow these steps:
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/ndit-dev/FabricPrompt.git
+    cd FabricPrompt
+    ```
+
+2. **Build the binary**:
+    Make sure you have Go installed on your system. You can download and install it from the [official Go website](https://golang.org/dl/).
+
+    ```sh
+    go build -o fabricp
+    ```
+
+3. **Move the binary to your PATH**:
+    Move the compiled binary to a directory that is in your system's PATH. For example, you can move it to `/usr/local/bin`:
+
+    ```sh
+    sudo mv fabricp /usr/local/bin/
+    ```
+
+4. **Verify the installation**:
+    Ensure that the binary is accessible from your terminal by running:
+
+    ```sh
+    fabricp --help
+    ```
+
+    You should see the help message for FabricPrompt.
+
+### Prerequisites
+
+- Ensure you have [Fabric](https://github.com/danielmiessler/fabric) installed and properly configured on your system.
+
 ## Usage
 
 type `fabricp` in your console after installation
