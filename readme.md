@@ -18,7 +18,12 @@ FabricPrompt simplifies interaction with Fabric by offering a user-friendly inte
 
 ## Install
 
-To install FabricPrompt, follow these steps:
+### Download latest build
+You can find tha latest built versions here: https://github.com/ndit-dev/FabricPrompt/actions/workflows/build.yml
+
+### Or build from source
+
+To build FabricPrompt from source, follow these steps:
 
 1. **Clone the repository**:
     ```sh
