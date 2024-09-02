@@ -8,7 +8,7 @@ import (
 )
 
 // Version of the program
-const version = "1.0.1"
+const version = "1.0.2"
 
 // printHelp displays the help message
 func printHelp() {
