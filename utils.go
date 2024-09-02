@@ -20,7 +20,7 @@ func printHelp() {
 	fmt.Println("  --version      Show version information")
 	fmt.Println("\nDescription:")
 	fmt.Println("  FabricPrompt allows you to input a query and select a Fabric pattern to process it.")
-	fmt.Println("  You can input your query manually or use the clipboard content.")
+	fmt.Println("  You can input your query manually after starting the program, or pipe text directly in to it.")
 	fmt.Println("  After entering your query, you can select additional options for the Fabric command.")
 }
 
