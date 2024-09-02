@@ -19,8 +19,8 @@ func main() {
 		}
 	}
 
-	finalQuery, usedClipboard := getInput()
+	finalQuery := getInput()
 	
 	// Prcoess the query with Fabric
-	generateFabricCommand(finalQuery, usedClipboard)
+	generateFabricCommand(finalQuery)
 }

@@ -67,7 +67,7 @@ func selectPattern() (string, error) {
 }
 
 // generateFabricCommand creates and executes the Fabric command
-func generateFabricCommand(question string, usedClipboard bool) {
+func generateFabricCommand(question string) {
     pattern, err := selectPattern()
     if err != nil {
         fmt.Printf("Error selecting pattern: %v\n", err)

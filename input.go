@@ -9,7 +9,7 @@ import (
 	"github.com/rivo/tview"
 )
 
-func getInput() (string, bool) {
+func getInput() (string) {
 	app := tview.NewApplication()
 
 	textArea := tview.NewTextArea().
@@ -95,5 +95,5 @@ func getInput() (string, bool) {
 	// store the prompt in a variable
 	prompt := textArea.GetText()
 
-    return prompt, false
+    return prompt 
 }
