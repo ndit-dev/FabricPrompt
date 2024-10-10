@@ -61,7 +61,7 @@ To build FabricPrompt from source, follow these steps:
 ## Usage
 
 type `fabricp` in your console after installation
-https://github.com/ndit-dev/FabricPrompt/blob/main/fabricPrompt_demo.gif
+[![Demo](https://github.com/ndit-dev/FabricPrompt/blob/main/fabricPrompt_demo.gif)]
 
 You can pipe text directly to FabricPrompt, and it will use the piped text as input instead of prompting for user input or using the clipboard, just as you do with fabric normally. For example:
 ```
